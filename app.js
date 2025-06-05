@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ナビバー用
+  initNavbar();
+  initSlideshow();
+});
+
+// ナビゲーションメニューの初期化
+function initNavbar() {
   const toggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('mobile-nav');
   const closeBtn = document.getElementById('close-btn');
@@ -16,12 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   closeBtn.addEventListener('click', closeMenu);
+  navLinks.forEach(link => link.addEventListener('click', closeMenu));
+}
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
-
-  // スライドショー用
+// ヒーロースライドショーの初期化
+function initSlideshow() {
   const images = [
     'images/hero1.jpg',
     'images/hero2.jpg',
@@ -29,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const slideshow = document.querySelector('.slideshow');
+  if (!slideshow) return;
 
   images.forEach((src, index) => {
     const img = document.createElement('img');
@@ -45,7 +50,5 @@ document.addEventListener('DOMContentLoaded', () => {
     slides[current].classList.remove('active');
     current = (current + 1) % slides.length;
     slides[current].classList.add('active');
-  }, 4000); // 4秒ごとに切り替え
-});
-
-
+  }, 5000);
+}
