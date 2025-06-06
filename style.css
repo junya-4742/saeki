@@ -186,17 +186,35 @@ section {
     background-color: #fce4ec;
 }
 
-.concept h2{
+.concept h2 {
     text-align: center;
     font-family: "IBM Plex Serif", serif;
 }
 
-.concept img{
+.concept img {
+    width: 90vw;
+}
+
+.about h2 {
+    text-align: center;
+    font-family: "IBM Plex Serif", serif;
+}
+
+.about img {
     width: 90vw;
 }
 
 .about {
     background-color: #f3e5f5;
+}
+
+.price img {
+    width: 90vw;
+}
+
+.price h2 {
+    text-align: center;
+    font-family: "IBM Plex Serif", serif;
 }
 
 .contact {
