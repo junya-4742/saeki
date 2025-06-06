@@ -16,7 +16,7 @@ body {
     width: 90%;
     max-width: 600px;
     margin: 0 auto;
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
 }
 
 /* ナビバー */
@@ -27,6 +27,7 @@ body {
     top: 0;
     left: 0;
     z-index: 100;
+
 }
 
 /* ロゴとメニューを左右に配置 */
@@ -49,6 +50,7 @@ body {
     gap: 5px;
     cursor: pointer;
     z-index: 11;
+
 }
 
 .menu-toggle span {
@@ -75,6 +77,9 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .close-btn {
@@ -156,27 +161,38 @@ section {
 }
 
 .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2; /* スライドより前面に */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none; /* ロゴの上でのクリックを透過 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    /* スライドより前面に */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    /* ロゴの上でのクリックを透過 */
 }
 
 
 .hero-overlay img {
-  width: 60%;
-  max-width: 300px;
-  height: auto;
+    width: 60%;
+    max-width: 300px;
+    height: auto;
 }
 
 .concept {
     background-color: #fce4ec;
+}
+
+.concept h2{
+    text-align: center;
+    font-family: "IBM Plex Serif", serif;
+}
+
+.concept img{
+    width: 90vw;
 }
 
 .about {
