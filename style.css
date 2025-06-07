@@ -230,6 +230,18 @@ section {
     margin-bottom: 25px;
 }
 
+.contact .container{
+    text-align: center;
+}
+
+.contact .container p{
+    margin-top: 20px;
+}
+
+.contact .container i{
+    margin-top: 20px;
+}
+
 /* フッター */
 .footer {
     background-color: #ccc;
