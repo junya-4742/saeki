@@ -189,6 +189,7 @@ section {
 .concept h2 {
     text-align: center;
     font-family: "IBM Plex Serif", serif;
+    margin-bottom: 25px;
 }
 
 .concept img {
@@ -198,6 +199,7 @@ section {
 .about h2 {
     text-align: center;
     font-family: "IBM Plex Serif", serif;
+    margin-bottom: 25px;
 }
 
 .about img {
@@ -215,10 +217,17 @@ section {
 .price h2 {
     text-align: center;
     font-family: "IBM Plex Serif", serif;
+    margin-bottom: 25px;
 }
 
 .contact {
     background-color: #ede7f6;
+}
+
+.contact h2 {
+    text-align: center;
+    font-family: "IBM Plex Serif", serif;
+    margin-bottom: 25px;
 }
 
 /* フッター */
