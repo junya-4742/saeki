@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSlideshow();
 });
 
-// ナビゲーションメニューの初期化
 function initNavbar() {
   const toggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('mobile-nav');
@@ -13,18 +12,21 @@ function initNavbar() {
   const closeMenu = () => {
     nav.classList.remove('show');
     toggle.classList.remove('hide');
+    toggle.setAttribute('aria-expanded', 'false');
+    nav.setAttribute('aria-hidden', 'true');
   };
 
   toggle.addEventListener('click', () => {
     nav.classList.add('show');
     toggle.classList.add('hide');
+    toggle.setAttribute('aria-expanded', 'true');
+    nav.setAttribute('aria-hidden', 'false');
   });
 
   closeBtn.addEventListener('click', closeMenu);
   navLinks.forEach(link => link.addEventListener('click', closeMenu));
 }
 
-// ヒーロースライドショーの初期化
 function initSlideshow() {
   const images = [
     'images/hero1.jpg',

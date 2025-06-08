@@ -1,251 +1,227 @@
 /* ベーススタイル */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
-    line-height: 1.6;
-    background-color: #fff;
-    color: #333;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
 }
 
 .container {
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
-    /* padding: 2rem 0; */
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ナビバー */
 .navbar {
-    background-color: transparent;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-
+  background-color: transparent;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
-/* ロゴとメニューを左右に配置 */
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* ロゴ */
 .logo img {
-    height: 80px;
-    width: auto;
+  height: 80px;
+  width: auto;
 }
 
-/* ハンバーガーメニュー */
 .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    z-index: 11;
-
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 11;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 16px;
 }
 
 .menu-toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    border-radius: 2px;
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
 }
 
 /* ナビメニュー */
 .mobile-nav {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.95);
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: "IBM Plex Serif", serif;
-    font-weight: 300;
-    font-style: normal;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 300;
+}
+
+.mobile-nav.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    color: #333;
-    cursor: pointer;
-    z-index: 11;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 11;
 }
 
 .mobile-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
 }
 
 .mobile-nav ul li {
-    margin: 1.5rem 0;
+  margin: 1.5rem 0;
 }
 
 .mobile-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.5rem;
-}
-
-/* 開いたときの表示 */
-.mobile-nav.show {
-    display: flex;
-    opacity: 1;
-    pointer-events: auto;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
 }
 
 .menu-toggle.hide {
-    display: none;
+  display: none;
 }
 
-/* 各セクション */
+/* セクション共通 */
 section {
-    padding: 3rem 0;
+  padding: 3rem 0;
 }
 
+/* ヒーロースライドショー */
 .hero {
-    position: relative;
-    width: 100vw;
-    /* 画面幅いっぱい */
-    height: 100vh;
-    /* 固定高さ */
-    overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .slideshow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
 }
 
 .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    z-index: 1;
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
 }
 
 .slide.active {
-    opacity: 1;
+  opacity: 1;
 }
 
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    /* スライドより前面に */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-    /* ロゴの上でのクリックを透過 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
 }
-
 
 .hero-overlay img {
-    width: 60%;
-    max-width: 300px;
-    height: auto;
+  width: 60%;
+  max-width: 300px;
+  height: auto;
 }
 
-.concept {
-    background-color: #fce4ec;
+/* 背景色・フォント調整（まとめて記述） */
+.concept,
+.price {
+  background-color: #f4e2e8;
 }
 
-.concept h2 {
+.about,.access {
+  background-color: #f3e5f5;
+}
+
+.access{
     text-align: center;
-    font-family: "IBM Plex Serif", serif;
-    margin-bottom: 25px;
 }
 
-.concept img {
-    width: 90vw;
+.concept p,
+.about p{
+    padding: 0.5rem 1.5rem;
 }
 
-.about h2 {
-    text-align: center;
-    font-family: "IBM Plex Serif", serif;
-    margin-bottom: 25px;
+.access p{
+    padding: 1rem;
 }
 
-.about img {
-    width: 90vw;
+h2 {
+  text-align: center;
+  font-family: 'IBM Plex Serif', serif;
+  margin-bottom: 25px;
 }
 
-.about {
-    background-color: #f3e5f5;
-}
-
+.concept img,
+.about img,
 .price img {
-    width: 90vw;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
 }
 
-.price h2 {
-    text-align: center;
-    font-family: "IBM Plex Serif", serif;
-    margin-bottom: 25px;
-}
-
-.contact {
-    background-color: #ede7f6;
-}
-
-.contact h2 {
-    text-align: center;
-    font-family: "IBM Plex Serif", serif;
-    margin-bottom: 25px;
-}
-
-.contact .container{
-    text-align: center;
-}
-
-.contact .container p{
-    margin-top: 20px;
-}
-
-.contact .container i{
-    margin-top: 20px;
-}
 
 /* フッター */
 .footer {
-    background-color: #ccc;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.8rem;
+  background-color: #ccc;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.8rem;
 }

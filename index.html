@@ -2,43 +2,37 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>RE:Beauty Salon</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="福岡県大野城市乙金にあるエステサロン。コンセプトや特徴を紹介。">
-
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="description" content="福岡県大野城市乙金にあるエステサロン。コンセプトや特徴を紹介。" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <meta name="google-site-verification" content="MgzmGyqho0nXmwoXF_NqHMRCrINc1vWLldP8DgnZ0B4" />
 </head>
 
 <body>
 
-    <!-- ナビバー -->
     <header class="navbar">
         <div class="container nav-container">
-            <!-- ロゴ -->
             <div class="logo">
-                <img src="images/image0.png" alt="お店のロゴ">
+                <img src="images/image0.png" alt="お店のロゴ" />
             </div>
 
-            <!-- ハンバーガーメニュー -->
-            <div class="menu-toggle" id="menu-toggle">
+            <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く" aria-expanded="false"
+                aria-controls="mobile-nav">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
 
-            <!-- ナビリンク -->
-            <nav class="mobile-nav" id="mobile-nav">
-                <!-- 閉じるボタン -->
-                <div class="close-btn" id="close-btn">&times;</div>
+            <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+                <button class="close-btn" id="close-btn" aria-label="メニューを閉じる">&times;</button>
                 <ul>
                     <li><a href="#concept">CONCEPT</a></li>
                     <li><a href="#about">ABOUT</a></li>
@@ -49,62 +43,53 @@
         </div>
     </header>
 
-    <!-- ヒーローイメージ -->
     <section class="hero">
-        <div class="slideshow"></div>
+        <div class="slideshow" aria-label="ヒーロースライドショー"></div>
         <div class="hero-overlay">
-            <img src="images/image2.png" alt="お店の名前">
+            <img src="images/image2.png" alt="お店の名前" />
         </div>
     </section>
 
-    <!-- コンセプト -->
-    <section id="concept" class="concept">
-        <div class="container">
-            <h2>CONCEPT</h2>
-            <img src="images/test01.jpeg" alt="コンセプト画像">
-            <p>あまりの気持ちよさに秒で寝てしまう人。何か静かになった
-                な～と思ったらたいてい寝ている。一度寝たら復活することはない。
-                お腹にあるシミはよだれ。汚いですね。
-            </p>
-        </div>
+    <section id="concept" class="concept container">
+        <h2>CONCEPT</h2>
+        <img src="images/test01.jpeg" alt="コンセプト画像" />
+        <p>あまりの気持ちよさに秒で寝てしまう人。何か静かになったな～と思ったらたいてい寝ている。一度寝たら復活することはない。お腹にあるシミはよだれ。汚いですね。</p>
     </section>
 
-    <!-- アバウト -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>ABOUT</h2>
-            <img src="images/test02.jpeg" alt="アバウト">
-            <p>全日本変態性癖寝技部門96kg級決勝戦。気合の入った表情を見せる松田直樹23歳。その体重で相手を圧倒し、優勝した。</p>
-        </div>
+    <section id="about" class="about container">
+        <h2>ABOUT</h2>
+        <img src="images/test02.jpeg" alt="アバウト" />
+        <p>全日本変態性癖寝技部門96kg級決勝戦。気合の入った表情を見せる松田直樹23歳。その体重で相手を圧倒し、見事優勝した。</p>
     </section>
 
-    <!-- プライス -->
-    <section id="price" class="price">
-        <div class="container">
-            <h2>PRICE</h2>
-            <img src="images/image5.jpeg" alt="料金">
-            <img src="images/image6.png" alt="料金">
-        </div>
+    <section id="price" class="price container">
+        <h2>PRICE</h2>
+        <img src="images/image5.jpeg" alt="料金" />
+        <img src="images/image6.png" alt="料金" />
     </section>
 
-    <!-- アクセス（電話番号と住所） -->
-    <section id="contact" class="contact">
-        <div class="container">
+    <section id="access" class="access container">
+        <div class="access map-container">
             <h2>ACCESS</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13299.766262808835!2d130.4940714279069!3d33.55489452556075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35419ae96012e533%3A0xb08596f5cb95da25!2z44CSODE2LTA5MDEg56aP5bKh55yM5aSn6YeO5Z-O5biC5LmZ6YeR5p2x!5e0!3m2!1sja!2sjp!4v1749302392629!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13299.766262808835!2d130.4940714279069!3d33.55489452556075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35419ae96012e533%3A0xb08596f5cb95da25!2z44CSODE2LTA5MDEg56aP5bKh55yM5aSn6YeO5Z-O5biC5LmZ6YeR5p2x!5e0!3m2!1sja!2sjp!4v1749302392629!5m2!1sja!2sjp"
+                class="map-iframe" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="RE:Beauty Salonの地図"></iframe>
             <p>↓ご予約・お問い合わせはインスタから↓</p>
-            <a href="https://www.instagram.com/re.beauty.salon/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/re.beauty.salon/" target="_blank" rel="noopener noreferrer"
+                aria-label="RE:Beauty Salonのインスタグラム">
                 <i class="fab fa-instagram fa-2x"></i>
             </a>
         </div>
+
     </section>
 
-    <!-- フッター -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 RE:Beauty Salon All rights reserved.</p>
         </div>
     </footer>
+
     <script src="app.js"></script>
 </body>
 
