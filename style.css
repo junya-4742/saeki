@@ -228,6 +228,14 @@ h2 {
 .footer {
   background-color: #ccc;
   text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
   padding: 1rem 0;
-  font-size: 0.8rem;
+}
+
+.footer .container {
+  width: 90%;
+  max-width: 600px; /* 他の.containerと揃える（heroだけ別途900pxにしている場合はそれは別枠） */
+  margin: 0 auto;
 }
